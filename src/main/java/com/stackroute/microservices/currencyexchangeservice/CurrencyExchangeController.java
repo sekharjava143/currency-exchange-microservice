@@ -26,6 +26,8 @@ public class CurrencyExchangeController {
 	public ExchangeValue retrieveExchangeValue
 		(@PathVariable String from, @PathVariable String to){
 		
+		
+		
 		ExchangeValue exchangeValue = 
 				repository.findByFromAndTo(from, to);
 		
