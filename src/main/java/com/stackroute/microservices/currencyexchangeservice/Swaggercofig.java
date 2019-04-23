@@ -25,7 +25,7 @@ public class Swaggercofig {
 			"StackRoute Admin", "http://stackroute.in", "stackrouteadmin@stackroute.in");
 	
 	public static final ApiInfo DEFAULT_API_INFO = new ApiInfo(
-			"Awesome API Title", "Awesome API Description", "1.0",
+			"Stackroute API Title", "sR API Description", "1.4",
 			"urn:tos", DEFAULT_CONTACT, 
 			"Apache 2.0", "http://www.apache.org/licenses/LICENSE-2.0");
 
@@ -37,7 +37,8 @@ public class Swaggercofig {
 	@Bean
 	public Docket getDocket() {
 		
-		return new Docket(DocumentationType.SWAGGER_2).apiInfo(DEFAULT_API_INFO)
+		return new Docket(DocumentationType.SWAGGER_2)
+				.apiInfo(DEFAULT_API_INFO)
 				.produces(DEFAULT_PRODUCES_AND_CONSUMES)
 				.consumes(DEFAULT_PRODUCES_AND_CONSUMES);
 	}
